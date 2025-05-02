@@ -1,6 +1,6 @@
-{% set python_min = '3.11' %}
+{% set python_min = "3.11" %}
 {% set name = "pyrasa" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyrasa-{{ version }}.tar.gz
-  sha256: 338fb9709cd0c2c7baa2536b12894df33d7333f8f8775a222a8bedf83956aa48
+  sha256: d76df78eae4cfb04998fb0fd68edca4208b580f077900036f22ac18cb83e5c68
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
